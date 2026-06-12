@@ -1,6 +1,6 @@
-# Heyra — Vegetarian Menu Planner
+# Vegetarian Menu Planner
 
-LLM-driven canteen menu generator. Run three scripts in order to go from a product catalogue to a validated, client-ready HTML menu.
+LLM-driven canteen menu generator. Run three scripts in order to go from raw product catalogue to a validated, client-ready HTML menu.
 
 ```bash
 python engine.py
@@ -12,7 +12,7 @@ python report.py
 
 ## engine.py
 
-Generates one vegetarian main meal per weekday using Claude.
+Generates one vegetarian main meal per weekday, calling the Claude API. This combines deterministic constraints with LLM query. 
 
 - Samples a shortlist of real products from the catalogue per component role (carb base, protein, vegetables, sauce)
 - Sends each day to the LLM with grounded candidates — the model picks products and portion sizes
@@ -21,7 +21,7 @@ Generates one vegetarian main meal per weekday using Claude.
 
 ## validator.py
 
-Deterministic checks on `week.json` — no LLM involved.
+Deterministic checks on `week.json` (no LLM involved).
 
 - Verifies all required component roles are present (carb base, protein, vegetables)
 - Checks every product ID exists in the catalogue (catches hallucinations)
