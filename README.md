@@ -1,4 +1,4 @@
-# Heyra — Vegetarian Menu Planner
+# Heyra - Vegetarian Menu Planner
 
 LLM-driven canteen menu generator. Produces a validated weekly meal plan from a product catalogue and renders it as an HTML overview.
 
