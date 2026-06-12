@@ -1,0 +1,6 @@
+.env
+__pycache__/
+week.json
+menu.html
+products.duckdb
+.DS_Store
